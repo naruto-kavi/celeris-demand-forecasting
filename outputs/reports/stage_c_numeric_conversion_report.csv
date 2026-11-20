@@ -1,0 +1,8 @@
+Column,Missing_Before,Missing_After,Newly_Missing
+Requested_Units,0,0,0
+Carried_In_Units,0,0,0
+Shipped_Units,0,0,0
+Backordered_Units,0,0,0
+Lost_Units,0,0,0
+Fill_Rate_Pct,0,0,0
+Stockout_Days,0,0,0

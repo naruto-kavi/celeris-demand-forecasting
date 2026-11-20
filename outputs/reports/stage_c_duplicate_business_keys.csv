@@ -1,0 +1,1 @@
+Date,SKU_ID,Region,Requested_Units,Carried_In_Units,Shipped_Units,Backordered_Units,Lost_Units,Fill_Rate_Pct,Stockout_Days,Reason,Unshipped_Units,Fulfillment_Gap,Calculated_Fill_Rate_Pct,Fill_Rate_Difference

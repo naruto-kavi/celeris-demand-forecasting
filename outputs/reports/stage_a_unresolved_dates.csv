@@ -1,0 +1,1 @@
+Record_ID,Date,Year,Month,Product_Family,Business_Unit,SKU_ID,SKU_Description,Customer_Name,Sales_Channel,Region,Units_Sold,Unit_Price_USD,Revenue_USD,Load_Timestamp,Raw_Date,Raw_SKU_ID,Raw_Region,Raw_Sales_Channel,Raw_Year,Raw_Month,Raw_Load_Timestamp,Parsed_Date,Year_Numeric,Month_Numeric

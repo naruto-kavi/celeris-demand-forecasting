@@ -1,0 +1,8 @@
+Metric,Value
+Original sales rows,244566
+Monthly forecasting rows,243624
+Unique SKUs,598
+Unique regions,6
+Number of features,44
+Inventory records matched,5786
+Rows with missing inventory,237838

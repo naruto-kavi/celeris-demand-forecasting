@@ -1,0 +1,8 @@
+File,Rows,Columns,Exact_Duplicates,Missing_Values
+train.csv,248248,15,2946,6945
+test.csv,58219,10,0,0
+macro_indicators.csv,114,11,0,5
+sku_master.csv,601,10,0,1184
+events_calendar.csv,68,7,0,1
+inventory_stockouts.csv,5830,11,0,0
+sample_submission.csv,5,4,0,0

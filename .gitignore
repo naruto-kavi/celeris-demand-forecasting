@@ -1,0 +1,15 @@
+@"
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.zip
+"@ | Out-File -Encoding utf8 .gitignore
+
+@"
+numpy
+pandas
+scikit-learn
+lightgbm
+streamlit
+"@ | Out-File -Encoding utf8 requirements.txt

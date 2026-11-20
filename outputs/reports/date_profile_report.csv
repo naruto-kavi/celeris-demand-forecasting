@@ -1,0 +1,6 @@
+File,Valid_Dates,Invalid_Dates,Minimum_Date,Maximum_Date
+train.csv,248248,0,2019-01-01,2062-10-01
+test.csv,58219,0,2026-11-01,2028-05-01
+macro_indicators.csv,114,0,2019-01-01,2028-05-01
+inventory_stockouts.csv,5830,0,2019-01-01,2026-10-01
+sample_submission.csv,5,0,2026-11-01,2027-03-01

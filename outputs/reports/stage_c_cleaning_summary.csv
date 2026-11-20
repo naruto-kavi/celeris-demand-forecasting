@@ -1,0 +1,14 @@
+Operation,Count
+Original inventory rows,5830
+Final inventory rows,5830
+Rows removed,0
+Unique SKUs,520
+Unique regions,6
+Missing-value records,0
+Negative-value records,0
+Duplicate business-key rows,0
+Duplicate business-key groups,0
+Fulfillment reconciliation differences,0
+Fill-rate discrepancies,2946
+Unknown inventory SKUs,0
+Training SKUs without inventory records,78

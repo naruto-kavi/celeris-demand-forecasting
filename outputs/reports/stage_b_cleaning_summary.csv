@@ -1,0 +1,16 @@
+Operation,Count
+Training rows before cleaning,244566
+Training rows after cleaning,244566
+Training rows removed,0
+Product families recovered,1228
+SKU descriptions recovered,982
+Missing units before recovery,3544
+Units recovered using revenue/price,2545
+Units still unresolved,999
+Missing units after recovery,999
+Missing revenue after conversion,380
+Missing regions,942
+Negative sales records,491
+Zero-price records,36352
+Duplicate macro source rows,2
+Macro rows after duplicate resolution,113
