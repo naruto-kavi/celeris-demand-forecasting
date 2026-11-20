@@ -50,6 +50,11 @@ python src/stage_e_f_g_pipeline.py
 streamlit run app.py
 ```
 
+## Live Demo
+
+Application link: https://celeris-demand-forecasting.streamlit.app/
+
+
 ## Repository Structure
 
 - `app.py` — Main Streamlit Control Tower application
