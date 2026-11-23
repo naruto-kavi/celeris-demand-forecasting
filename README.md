@@ -55,15 +55,6 @@ streamlit run app.py
 Application link: https://celeris-demand-forecasting.streamlit.app/
 
 
-## Repository Structure
-
-- `app.py` — Main Streamlit Control Tower application
-- `src/` — Data profiling, cleaning (Stages A–C), feature engineering (Stages D–E), backtesting & forecasting (Stages F–G), and source scripts
-- `data/raw/` & `data/processed/` — Raw inputs and staged processed datasets (`train_stage_e.csv`, `test_stage_e.csv`, `forecast_stage_g_full.csv`, etc.)
-- `outputs/reports/` — Cleaning, anomaly, and backtest evaluation reports
-- `outputs/submissions/submission.csv` — Final `58,219`-row non-negative integer forecast submission
-
-
 ## 2. Backtest Benchmarks & Accuracy Breakdown (Stage F)
 
 Evaluated on a 12-month recursive multi-step holdout window (`2025-11` to `2026-10`):
@@ -142,11 +133,6 @@ python src/stage_e_f_g_pipeline.py
 # 5. Launch the Planning Control Tower dashboard
 streamlit run app.py
 ```
-
-### Streamlit Community Cloud Deployment
-1. Sign in at [share.streamlit.io](https://share.streamlit.io/) with GitHub.
-2. Select repository **`naruto-kavi/celeris-demand-forecasting`**, branch **`main`**, and main file path **`app.py`**.
-3. Click **Deploy** to launch the hosted interactive dashboard.
 
 ---
 
