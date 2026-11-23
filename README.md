@@ -30,25 +30,6 @@ This project delivers:
 5. **Forecast & Accuracy:** Backtest WAPE and bias overall, by product family, by region, and across forecast horizons.
 6. **P90 Procurement, What-If & Lifecycle:** Interactive `ISM_Manufacturing_PMI` shock simulator, `P90` procurement quantities, and EOL / discontinued / planned-launch watchlist.
 
-## Local Setup & Execution
-
-```bash
-# 1. Create and activate a virtual environment
-python -m venv venv
-# Windows PowerShell:
-.\venv\Scripts\Activate.ps1
-# macOS / Linux:
-source venv/bin/activate
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run feature engineering, backtesting, and 19-month forecast generation
-python src/stage_e_f_g_pipeline.py
-
-# 4. Launch the Streamlit Control Tower
-streamlit run app.py
-```
 
 ## Live Demo
 
@@ -92,7 +73,7 @@ Evaluated on a 12-month recursive multi-step holdout window (`2025-11` to `2026-
 | **Stage B** | Missing product attributes, region aliases, & `3,544` missing `Units_Sold` | Standardized regions/SKUs; recovered `2,545` exact integer unit rows from `Revenue_USD / Unit_Price_USD`; flagged `999` unresolved (`outputs/reports/stage_b_cleaning_summary.csv`) |
 | **Stage C** | Supply-constrained inventory records (`5,830` rows) | Validated `Requested + Carried_In = Shipped + Backordered + Lost` (`0` fulfillment gaps) (`outputs/reports/stage_c_cleaning_summary.csv`) |
 | **Stage D–E** | Stockout demand censoring & `491` negative return/credit rows | Excluded negative rows into `stage_e_negative_demand_investigation.csv`; recovered `+94,990` unconstrained units during stockout months |
-| **Stage E** | Lifecycle boundaries & external business events | Enforced zero demand outside `[Launch_Date, EOL_Date]`; mapped `Replaces_SKU` history to planned launches; encoded `events_calendar.csv` & lagged macro indicators |
+| **Stage F** | Lifecycle boundaries & external business events | Enforced zero demand outside `[Launch_Date, EOL_Date]`; mapped `Replaces_SKU` history to planned launches; encoded `events_calendar.csv` & lagged macro indicators |
 
 ---
 
@@ -100,12 +81,12 @@ Evaluated on a 12-month recursive multi-step holdout window (`2025-11` to `2026-
 
 The Streamlit Control Tower reads dynamically from pipeline outputs (`train_stage_e.csv`, `forecast_stage_g_full.csv`, `sku_master.csv`, and `outputs/reports/*.csv`) and shares sidebar filters (`Control Tower Part`, `Product Family`, `Region`, `Sales Channel`, `Customer Name`, `SKU ID`) across six views:
 
-1. **1. Executive Overview:** Continuous timeline from historical unconstrained demand (`2019-01`–`2026-10`) into the 19-month forecast (`2026-11`–`2028-05`), KPI cards (`12,248,788` historical unconstrained units, `2,502,206` P50 forecast, `3,643,765` P90 upper band, `94,990` stockout units recovered), and forecast mix by product family and region.
-2. **2. Data Health:** Cleaning operation counts, file reconciliation summaries, and feature completeness tables.
-3. **3. Demand Explorer:** Monthly seasonality profile, zero-demand month share, customer/channel breakdown, and top SKU-region demand tables.
-4. **4. Anomaly Monitor:** Structured Anomaly Register (separating data errors from real supply/market events), negative demand transaction log, and active event flags.
-5. **5. Forecast & Accuracy:** Stage F backtest WAPE and bias tables overall, by product family, by region, and across forecast horizons.
-6. **6. P90 Procurement, What-If & Lifecycle:** Interactive `ISM_Manufacturing_PMI` shock simulator, `P90` procurement quantities, and `EOL Announced` / `Discontinued` / `Planned Launch` SKU watchlist.
+1. **Executive Overview:** Continuous timeline from historical unconstrained demand (`2019-01`–`2026-10`) into the 19-month forecast (`2026-11`–`2028-05`), KPI cards (`12,248,788` historical unconstrained units, `2,502,206` P50 forecast, `3,643,765` P90 upper band, `94,990` stockout units recovered), and forecast mix by product family and region.
+2. **Data Health:** Cleaning operation counts, file reconciliation summaries, and feature completeness tables.
+3. **Demand Explorer:** Monthly seasonality profile, zero-demand month share, customer/channel breakdown, and top SKU-region demand tables.
+4. **Anomaly Monitor:** Structured Anomaly Register (separating data errors from real supply/market events), negative demand transaction log, and active event flags.
+5. **Forecast & Accuracy:** Stage F backtest WAPE and bias tables overall, by product family, by region, and across forecast horizons.
+6. **P90 Procurement, What-If & Lifecycle:** Interactive `ISM_Manufacturing_PMI` shock simulator, `P90` procurement quantities, and `EOL Announced` / `Discontinued` / `Planned Launch` SKU watchlist.
 
 ---
 
